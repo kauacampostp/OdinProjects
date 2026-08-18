@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library</title>
+  <link href="./style.css" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <h2>My Library</h2>
+  </header>
+  <main>
+    <section class="bookshelf" id="bookshelf" >
+      <button class="btn-add-book" id="btnAddBook">+</button>
+    </section>
+  </main>
+
+  <aside class="modal-overlay ishidden">
+    <div class="modal">
+      <h1 class="modal-title"> New Book </h1>
+      <input class="modal-input" id="modalInputName" placeholder="Write the book name"/>
+      <input class="modal-input" id="modalInputAuthor" placeholder="Write the book author"/>
+      <input class="modal-input" id="modalInputPages" placeholder="Write the book pages"/>
+      <div class="modal-div-checkbox">
+        <p>Do you read the book?</p>
+        <input type="checkbox" class="modal-input-checkbox" id="modalInputCheckbox"/>
+      </div>
+      
+      <button class="modal-btn-add-book" id="modalBtnAddBook">Add Book</button>
+    </div>
+  </aside>
+  
+  <script src="./script.js"></script>
+</body>
+</html>
