@@ -1,13 +1,12 @@
-export default function Buttons() {
+export default function Buttons({cancelBtn}) {
   return (
     <footer>
-      <button className="delete-btn">Delete</button>
+      <button className="delete-btn" >Delete</button>
 
-      <div>
-        <button className="cancel-btn">Cancel</button>
-        <button className="submit-btn">Submit</button>
+      <div className="btn-cancel-add">
+        <button className="cancel-btn" onClick={cancelBtn}>Cancel</button>
+        <button type="submit" className="submit-btn">Submit</button>
       </div>
-
     </footer>
-  )
+  );
 }

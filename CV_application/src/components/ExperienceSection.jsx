@@ -1,13 +1,25 @@
-import ExperienceForm from "./ExperienceForm"
+import { useState } from "react";
+import ExperienceForm from "./ExperienceForm";
 
-export default function ExperienceSection() {
+export default function ExperienceSection({ aoSalvar, area }) {
+  const [showForm, setShowForm] = useState(false);
+
+  function handleAddBtn() {
+    setShowForm((showForm) => !showForm);
+  }
 
   return (
     <>
-      <h1 className="section-name">Experience</h1>
-
-      <button>Education</button>
-    
+      {showForm ? (
+        <ExperienceForm
+          aoSalvar={aoSalvar}
+          cancelBtn={handleAddBtn}
+          area={area}
+        />
+      ) : null}
+      <button className="experience-btn-add" onClick={handleAddBtn}>
+        Experience
+      </button>
     </>
-  )
+  );
 }

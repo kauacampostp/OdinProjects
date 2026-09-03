@@ -1,19 +1,24 @@
-import EducationForm from "./EducationForm"
+import { useState } from "react";
+import EducationForm from "./EducationForm";
 
-export default function EducationSection() {
-  function educationForm(){
+export default function EducationSection({ aoSalvar, area }) {
+  const [showForm, setShowForm] = useState(false);
 
-    return (
-      <EducationForm />
-    )
+  function handleAddBtn() {
+    setShowForm((showForm) => !showForm);
   }
-
   return (
     <>
-      <h1 className="section-name">Education</h1>
-
-      <button onClick={educationForm}>Education</button>
-    
+      {showForm ? (
+        <EducationForm
+          aoSalvar={aoSalvar}
+          cancelBtn={handleAddBtn}
+          area={area}
+        />
+      ) : null}
+      <button className="education-btn-add" onClick={handleAddBtn}>
+        Education
+      </button>
     </>
-  )
+  );
 }
