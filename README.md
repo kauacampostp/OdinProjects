@@ -18,7 +18,7 @@ Colocar em prática os conceitos ensinados no curso através de projetos reais, 
 | # | Projeto | Descrição | Status | Link |
 |---|---------|-----------|--------|------|
 | 1 | **Minha Biblioteca** | App para cadastrar, editar, marcar como lido e remover livros, com persistência de dados | ✅ Concluído | [Demo](https://kauacampostp.github.io/OdinProjects/Biblioteca) |
-| 2 | **Gerador de Currículo** | Site para criar e exportar um currículo personalizado | ✅ Concluído | [Demo](https://kauacampostp.github.io/OdinProjects/CV_application) |
+| 2 | **Gerador de Currículo** | Site para criar e exportar um currículo personalizado | ✅ Concluído | [Demo](https://odin-projects-umber.vercel.app/) |
 
 > A tabela é atualizada conforme novos projetos são adicionados ao repositório.
 
