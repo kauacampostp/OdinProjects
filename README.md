@@ -18,7 +18,7 @@ Colocar em prática os conceitos ensinados no curso através de projetos reais, 
 | # | Projeto | Descrição | Status | Link |
 |---|---------|-----------|--------|------|
 | 1 | **Minha Biblioteca** | App para cadastrar, editar, marcar como lido e remover livros, com persistência de dados | ✅ Concluído | [Demo](https://kauacampostp.github.io/OdinProjects/Biblioteca) |
-| 2 | **Gerador de Currículo** | Site para criar e exportar um currículo personalizado | 🚧 Em desenvolvimento | — |
+| 2 | **Gerador de Currículo** | Site para criar e exportar um currículo personalizado | 🚧 Em desenvolvimento | [Demo](https://kauacampostp.github.io/OdinProjects/CV_application) |
 
 > A tabela é atualizada conforme novos projetos são adicionados ao repositório.
 
@@ -35,7 +35,7 @@ Cada projeto está em sua própria pasta e pode ser aberto diretamente (`index.h
 
 - [x] Fundamentos de JavaScript (manipulação de DOM, eventos, prototypes)
 - [x] Projeto: Biblioteca de livros
-- [ ] Projeto: Gerador de currículo (React)
+- [x] Projeto: Gerador de currículo (React)
 - [ ] Projetos com Node.js e banco de dados
 - [ ] Deploy de aplicações full stack
 
