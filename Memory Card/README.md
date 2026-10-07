@@ -46,6 +46,8 @@ When a card is clicked:
 3. The cards are shuffled using the Fisher-Yates algorithm.
 4. If the Pokémon was already clicked, the player loses.
 5. If all 15 Pokémon are selected without repetition, the player wins.
+```
+
 🚀 Running Locally
 Clone the repository:
 git clone YOUR_REPOSITORY_URL
@@ -80,7 +82,7 @@ Pokémon data is provided by:
 PokéAPI
 
 📸 Preview
-
+![Pokémon Memory Card Game](./screenshots/image.png)
 
 
 📖 Project Context
