@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "name": "Porsche 911 Carrera",
+    "category": "esportivo",
+    "price": 1050000,
+    "oldPrice": 1120000,
+    "featured": true,
+    "highlight": "Motor traseiro e 0 a 100 km/h em cerca de 4 segundos",
+    "images": [
+      "/images/porsche-911-1.jpg",
+      "/images/porsche-911-2.jpg"
+    ],
+    "specs": {
+      "engine": "3.0 biturbo",
+      "power": "385 cv",
+      "year": 2024,
+      "transmission": "Automático de 8 marchas",
+      "seats": 4
+    }
+  },
+  {
+    "id": 2,
+    "name": "Ford Mustang GT",
+    "category": "esportivo",
+    "price": 480000,
+    "oldPrice": null,
+    "featured": false,
+    "highlight": "Motor V8 com o som clássico dos muscle cars",
+    "images": [
+      "/images/mustang-gt-1.jpg",
+      "/images/mustang-gt-2.jpg"
+    ],
+    "specs": {
+      "engine": "5.0 V8",
+      "power": "450 cv",
+      "year": 2024,
+      "transmission": "Automático de 10 marchas",
+      "seats": 4
+    }
+  },
+  {
+    "id": 3,
+    "name": "Honda HR-V",
+    "category": "suv",
+    "price": 190000,
+    "oldPrice": 205000,
+    "featured": true,
+    "highlight": "SUV compacto com bom espaço interno e ótimo custo-benefício",
+    "images": [
+      "/images/honda-hrv-1.jpg",
+      "/images/honda-hrv-2.jpg"
+    ],
+    "specs": {
+      "engine": "1.5 turbo",
+      "power": "177 cv",
+      "year": 2024,
+      "transmission": "Automático CVT",
+      "seats": 5
+    }
+  },
+  {
+    "id": 4,
+    "name": "Chevrolet Spin",
+    "category": "familia",
+    "price": 140000,
+    "oldPrice": null,
+    "featured": false,
+    "highlight": "Até 7 lugares para levar toda a família",
+    "images": [
+      "/images/chevrolet-spin-1.jpg",
+      "/images/chevrolet-spin-2.jpg"
+    ],
+    "specs": {
+      "engine": "1.8",
+      "power": "111 cv",
+      "year": 2024,
+      "transmission": "Automático de 6 marchas",
+      "seats": 7
+    }
+  },
+  {
+    "id": 5,
+    "name": "Fiat Mobi",
+    "category": "economico",
+    "price": 75000,
+    "oldPrice": 82000,
+    "featured": true,
+    "highlight": "Compacto fácil de estacionar e de baixo consumo",
+    "images": [
+      "/images/fiat-mobi-1.jpg",
+      "/images/fiat-mobi-2.jpg"
+    ],
+    "specs": {
+      "engine": "1.0",
+      "power": "75 cv",
+      "year": 2024,
+      "transmission": "Manual de 5 marchas",
+      "seats": 4
+    }
+  }
+]
