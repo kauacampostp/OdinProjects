@@ -10,7 +10,7 @@ export function CarsProvider({ children }) {
   useEffect(() => {
     async function fetchCars() {
       try {
-        const response = await fetch("data/cars.json");
+        const response = await fetch("/data/cars.json"); 
         if (!response.ok) {
           throw new Error("Busca não encontra (404) ou erro no servidor (500)");
         }
@@ -28,12 +28,8 @@ export function CarsProvider({ children }) {
     fetchCars();
   }, []);
 
-  function seachItem(id) {
-    const infoItem = carsList.find(id);
-
-    if (infoItem === undefined) {
-      throw new Error("Item não encontrado");
-    }
+  function searchItem(id) {
+    const infoItem = carsList.find((car) => car.id === id);
 
     return infoItem;
   }
@@ -42,6 +38,7 @@ export function CarsProvider({ children }) {
     carsList,
     loading,
     err,
+    searchItem,
   };
   return <CarsContext.Provider value={value}>{children}</CarsContext.Provider>;
 }
@@ -57,6 +54,3 @@ export function useCars() {
 }
 
 export default CarsContext;
-
-
-// Verificar se estar correto e ir para proximo passo
