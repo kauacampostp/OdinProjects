@@ -1,33 +1,32 @@
 import { useCars } from "../context/CarsContext";
 import { useCart } from "../context/CartContext";
 import QuantityInput from "./QuantityInput";
+import { formatBRL } from "../utils/formatBRL";
 
-function CartItem() {
-  const { cartList, addItem } = useCart();
+function CartItem({ item }) {
+  const { updateQuantity, removeItem } = useCart();
   const { searchItem } = useCars();
+  const infoItem = searchItem(item.id);
+
+  if (!infoItem) {
+    return null;
+  }
+
+  const totalValue = item.quantity * infoItem.price;
 
   return (
     <section>
-      {cartList.map((item) => {
-        const infoItem = searchItem(item.id);
+      <img src={infoItem.images[0]} alt={infoItem.name}></img>
+      <h3>{infoItem.name}</h3>
+      <span>{formatBRL(infoItem.price)}</span>
+      <span>{formatBRL(totalValue)}</span>
 
-        const totalValue = item.quantity * infoItem.price;
+      <QuantityInput
+        value={item.quantity}
+        onChange={(newQuantity) => updateQuantity(item.id, newQuantity)}
+      />
 
-        if (!infoItem) {
-          throw new Error("Lista não carregada!");
-        }
-
-        return (
-          <div>
-            <img src={infoItem.images[0]}></img>
-            <h3>{infoItem.name}</h3>
-            <span>{infoItem.price}</span>
-            <span>{totalValue}</span>
-
-            <QuantityInput value={quantity} onChange={addItem} />
-          </div>
-        );
-      })}
+      <button onClick={() => removeItem(item.id)}>Remove</button>
     </section>
   );
 }
