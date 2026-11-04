@@ -14,20 +14,29 @@ function Shop() {
     : carsList;
 
   return (
-    <main>
-      {/* Verifica se acabou o loading e renderiza a lista de carros | o key é por causa do map, não é um prop que o componente recebe */}
+    <main className="max-w-6xl mx-auto px-4 py-6">
+      <h1 className="text-2xl font-bold mb-4">Shop</h1>
+
+      {/* Mensagens ficam fora do grid, para ocuparem a largura toda */}
       {!err && !loading && visibleCars.length === 0 && (
-        <div>Nenhum carro nessa categoria.</div>
+        <div className="text-gray-600">Nenhum carro nessa categoria.</div>
       )}
 
-      {!loading && visibleCars.map((car) => <CarCard car={car} key={car.id} />)}
-
-      {loading && <div>Loading...</div>}
+      {loading && <div className="text-gray-600">Loading...</div>}
 
       {err && (
-        <div>
-          <h2>Houve um problema</h2>
+        <div className="rounded-lg bg-red-50 text-red-800 p-4">
+          <h2 className="font-semibold">Houve um problema</h2>
           <span>{err}</span>
+        </div>
+      )}
+
+      {/* O key é por causa do map, não é um prop que o componente recebe */}
+      {!loading && visibleCars.length > 0 && (
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {visibleCars.map((car) => (
+            <CarCard car={car} key={car.id} />
+          ))}
         </div>
       )}
     </main>
